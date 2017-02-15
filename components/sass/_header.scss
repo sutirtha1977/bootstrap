@@ -1,0 +1,135 @@
+// Navbar Header
+header {
+	.navbar {
+		padding: 30px 0;
+		transition: all .5s ease-out;		
+	}
+	.navbar-default {
+		background-color: transparent;
+		border: none;
+		.navbar-nav a {
+			color: $white;
+			padding: 5px 8px;
+		}
+		.navbar-nav a:hover {
+			color: $yellow;
+		}
+		.navbar-nav .active a {
+			font-weight: 700;
+			color: $yellow;
+			background: transparent;
+			border-bottom: 4px solid $yellow;
+			text-shadow: none;
+		}
+		.navbar-nav .active a:hover {
+			color: $red;
+			background: transparent;
+			text-shadow: none;
+		}	
+		.navbar-toggle .icon-bar {
+			background-color: $white;
+		}	
+	}
+	// Navbar Brand
+	.navbar-brand {
+		background: url(../images/logo/logo.svg);
+		background-repeat: no-repeat;
+		background-position: 15px 0;
+		height: auto;
+		h1 {
+			color: $white;
+			margin: 0;
+			font-size: 1.8em;
+			font-weight: 400;
+			padding-left: 105px;
+		}
+		span.subhead {
+			display: block;
+			font-family: "Roboto Slab", serif;
+			font-size: .6em;
+			font-weight: 100;
+		}		
+	}
+	// Navbar Toggle
+	.navbar-toggle {
+		background-color: $greentint;		
+	}
+	// Nav inbody
+	.inbody {
+		background: rgba(104,73,49,.9); 
+		.navbar-brand {
+			background-size: 37px;
+			background-position: top left;
+			margin-top: 5px;
+			padding-bottom: 0;
+			margin-left: 10px;
+			h1{
+				font-size: 1.1em;
+				padding-left: 38px;
+			}
+			span.subhead {
+				display:none;
+			}
+		}
+	}
+	.navbar.inbody {
+		padding-top: 0;
+		padding-bottom: 0;
+		.navbar-nav {
+			padding-top: 10px;
+
+		}
+	}
+}
+
+@media only screen 
+and (max-width: 768px) {
+	header .navbar-collapse.in {
+		background-color: rgba(0,0,0,.5);
+	}	
+}
+
+/**  Carousel Fade **/
+
+.carousel.fade {
+  opacity: 1;
+  .item {
+	  transition: opacity ease-out .7s;
+	  left: 0;
+	  opacity: 0;
+	  top: 0;
+	  position: absolute;
+	  width: 100%;
+	  display: block;  	
+  }
+  .item:first-child {
+	  top: auto;
+	  opacity: 1;
+	  position: relative;  	
+  }
+  .item.active {
+  	opacity: 1;  	
+  }
+}
+
+.carousel-control {
+	opacity: 0;
+	.right,
+	.left {
+		background-image: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
